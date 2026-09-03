@@ -8,7 +8,7 @@ Nettoyeur de fichiers inutiles — léger, rapide, sans dépendances.
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
 ![Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen)
 
-[⬇️ Télécharger](https://github.com/MATTRAX64/PC-Cleaner/raw/refs/heads/main/pc_cleaner.pyw) · 🇫🇷 [FR](#français) · 🇬🇧 [EN](#english) · 🇪🇸 [ES](#español) · 🇩🇪 [DE](#deutsch)
+[⬇️ Télécharger](https://github.com/MATTRAX64/PC-Cleaner/releases/latest/download/pc_cleaner.pyw) · 🇫🇷 [FR](#français) · 🇬🇧 [EN](#english) · 🇪🇸 [ES](#español) · 🇩🇪 [DE](#deutsch)
 
 </div>
 
