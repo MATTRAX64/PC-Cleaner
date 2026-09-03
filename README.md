@@ -1,115 +1,69 @@
+<div align="center">
+
 # 🧹 PC Cleaner
 
-**[Français](#français) | [English](#english) | [Español](#español) | [Deutsch](#deutsch)**
+Nettoyeur de fichiers inutiles — léger, rapide, sans dépendances.
+
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
+![Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen)
+
+[⬇️ Télécharger](https://github.com/MATTRAX64/PC-Cleaner/raw/refs/heads/main/pc_cleaner.pyw) · 🇫🇷 [FR](#français) · 🇬🇧 [EN](#english) · 🇪🇸 [ES](#español) · 🇩🇪 [DE](#deutsch)
+
+</div>
 
 ---
 
 ## Français
 
-Outil simple pour nettoyer un dossier (ou un disque entier) des fichiers inutiles : logs, fichiers temporaires, fichiers vides, dossiers vides.
+Nettoie un dossier (ou un disque entier) des fichiers inutiles : logs, temporaires, fichiers vides, dossiers vides. Scan multi-thread, interface simple, un seul fichier, zéro dépendance.
 
-**Stack :** Python 3, Tkinter, `concurrent.futures.ThreadPoolExecutor`. Un seul fichier `pc_cleaner.pyw`, zéro dépendance externe.
+**Utilisation :** télécharge `pc_cleaner.pyw`, double-clique, choisis ta langue, choisis un dossier, clique sur **Nettoyer**.
 
-### Ce qu'il fait
-- Scan multi-thread d'un dossier donné
-- Supprime : `.log .tmp .bak .old .cache .dmp .swp` etc., `thumbs.db`, `desktop.ini`, tout fichier de 0 octet
-- Supprime les dossiers vides après nettoyage
-- Détecte les dossiers 100% composés de fichiers inutiles et les détruit en un seul `rmtree` (plus rapide que fichier par fichier)
-- Exclut automatiquement `Windows` du scan
+**Supprime :** `.log .tmp .bak .old .cache .dmp` etc., `thumbs.db`, `desktop.ini`, tout fichier de 0 octet, dossiers vides. Le dossier `Windows` est toujours exclu.
 
-### Lancer
-```bash
-python pc_cleaner.pyw
-# ou double-clic si Python est associé aux .pyw
-```
-Aucune install requise (Tkinter est fourni avec Python).
-
-### Structure du code
-- `is_useless_file()` / `is_empty_file()` : détection des fichiers ciblés
-- `scan_dir()` : worker de thread, analyse un dossier
-- `clean()` : orchestration du scan multi-thread + suppression
-- `CleanerApp` : GUI Tkinter
+⚠️ Suppression définitive, pas de corbeille. Requiert Python 3.7+ (Tkinter inclus).
 
 ---
 
 ## English
 
-Simple tool to clean a folder (or a whole drive) of useless files: logs, temp files, empty files, empty folders.
+Cleans a folder (or a whole drive) of useless files: logs, temp files, empty files, empty folders. Multi-threaded scan, simple UI, single file, zero dependencies.
 
-**Stack:** Python 3, Tkinter, `concurrent.futures.ThreadPoolExecutor`. Single file `pc_cleaner.pyw`, zero external dependencies.
+**Usage:** download `pc_cleaner.pyw`, double-click, pick a language, pick a folder, click **Clean**.
 
-### What it does
-- Multi-threaded scan of a given folder
-- Deletes: `.log .tmp .bak .old .cache .dmp .swp` etc., `thumbs.db`, `desktop.ini`, any 0-byte file
-- Removes empty folders after cleanup
-- Detects folders made entirely of useless files and deletes them in a single `rmtree` (faster than file-by-file)
-- Automatically excludes `Windows` from the scan
+**Deletes:** `.log .tmp .bak .old .cache .dmp` etc., `thumbs.db`, `desktop.ini`, any 0-byte file, empty folders. The `Windows` folder is always excluded.
 
-### Run
-```bash
-python pc_cleaner.pyw
-# or double-click if Python is associated with .pyw files
-```
-No install required (Tkinter ships with Python).
-
-### Code structure
-- `is_useless_file()` / `is_empty_file()`: target file detection
-- `scan_dir()`: thread worker, scans one folder
-- `clean()`: orchestrates the multi-threaded scan + deletion
-- `CleanerApp`: Tkinter GUI
+⚠️ Deletion is permanent, no trash bin. Requires Python 3.7+ (Tkinter included).
 
 ---
 
 ## Español
 
-Herramienta simple para limpiar una carpeta (o un disco entero) de archivos inútiles: logs, archivos temporales, archivos vacíos, carpetas vacías.
+Limpia una carpeta (o un disco entero) de archivos inútiles: logs, temporales, archivos vacíos, carpetas vacías. Escaneo multi-hilo, interfaz simple, un solo archivo, sin dependencias.
 
-**Stack:** Python 3, Tkinter, `concurrent.futures.ThreadPoolExecutor`. Un solo archivo `pc_cleaner.pyw`, sin dependencias externas.
+**Uso:** descarga `pc_cleaner.pyw`, doble clic, elige idioma, elige carpeta, haz clic en **Limpiar**.
 
-### Qué hace
-- Escaneo multi-hilo de una carpeta dada
-- Elimina: `.log .tmp .bak .old .cache .dmp .swp` etc., `thumbs.db`, `desktop.ini`, cualquier archivo de 0 bytes
-- Elimina carpetas vacías tras la limpieza
-- Detecta carpetas compuestas únicamente por archivos inútiles y las elimina de una vez con `rmtree` (más rápido que archivo por archivo)
-- Excluye automáticamente `Windows` del escaneo
+**Elimina:** `.log .tmp .bak .old .cache .dmp` etc., `thumbs.db`, `desktop.ini`, archivos de 0 bytes, carpetas vacías. La carpeta `Windows` siempre queda excluida.
 
-### Ejecutar
-```bash
-python pc_cleaner.pyw
-# o doble clic si Python está asociado a los .pyw
-```
-No requiere instalación (Tkinter viene incluido con Python).
-
-### Estructura del código
-- `is_useless_file()` / `is_empty_file()`: detección de archivos objetivo
-- `scan_dir()`: worker de hilo, escanea una carpeta
-- `clean()`: orquesta el escaneo multi-hilo + eliminación
-- `CleanerApp`: GUI Tkinter
+⚠️ Eliminación permanente, sin papelera. Requiere Python 3.7+ (Tkinter incluido).
 
 ---
 
 ## Deutsch
 
-Einfaches Tool zum Bereinigen eines Ordners (oder eines ganzen Laufwerks) von nutzlosen Dateien: Logs, temporäre Dateien, leere Dateien, leere Ordner.
+Bereinigt einen Ordner (oder ein ganzes Laufwerk) von nutzlosen Dateien: Logs, temporäre Dateien, leere Dateien, leere Ordner. Multi-Thread-Scan, einfache Oberfläche, eine Datei, keine Abhängigkeiten.
 
-**Stack:** Python 3, Tkinter, `concurrent.futures.ThreadPoolExecutor`. Einzelne Datei `pc_cleaner.pyw`, keine externen Abhängigkeiten.
+**Verwendung:** `pc_cleaner.pyw` herunterladen, doppelklicken, Sprache wählen, Ordner wählen, auf **Bereinigen** klicken.
 
-### Was es macht
-- Multi-Thread-Scan eines angegebenen Ordners
-- Löscht: `.log .tmp .bak .old .cache .dmp .swp` usw., `thumbs.db`, `desktop.ini`, jede 0-Byte-Datei
-- Entfernt leere Ordner nach der Bereinigung
-- Erkennt Ordner, die vollständig aus nutzlosen Dateien bestehen, und löscht sie in einem einzigen `rmtree` (schneller als Datei für Datei)
-- Schließt `Windows` automatisch vom Scan aus
+**Löscht:** `.log .tmp .bak .old .cache .dmp` usw., `thumbs.db`, `desktop.ini`, jede 0-Byte-Datei, leere Ordner. Der Ordner `Windows` wird immer ausgeschlossen.
 
-### Ausführen
-```bash
-python pc_cleaner.pyw
-# oder Doppelklick, wenn Python mit .pyw-Dateien verknüpft ist
-```
-Keine Installation nötig (Tkinter ist bei Python bereits enthalten).
+⚠️ Löschung ist endgültig, kein Papierkorb. Erfordert Python 3.7+ (Tkinter enthalten).
 
-### Code-Struktur
-- `is_useless_file()` / `is_empty_file()`: Erkennung der Zieldateien
-- `scan_dir()`: Thread-Worker, scannt einen Ordner
-- `clean()`: orchestriert Multi-Thread-Scan + Löschung
-- `CleanerApp`: Tkinter-GUI
+---
+
+<div align="center">
+
+Libre d'utilisation · Free to use
+
+</div>
